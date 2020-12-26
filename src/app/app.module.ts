@@ -10,19 +10,22 @@ import {MaterialModule} from "./shared/material.module";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ErrorHandlerInterceptor} from "./interceptors/error-handler.interceptor";
 import { SpinnerComponent } from './shared-UI/spinner/spinner.component';
+import { LockInputComponent } from './components/lock-input/lock-input.component';
+import {ComplexFormControlModule} from "./modules/complex-form-control/complex-form-control.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SpinnerComponent
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ComplexFormControlModule,
     HttpClientModule
   ],
   providers: [{

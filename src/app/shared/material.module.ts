@@ -28,6 +28,8 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
 
 const MATERIAL_MODULES = [
   MatTreeModule,
@@ -57,7 +59,9 @@ const MATERIAL_MODULES = [
   MatMenuModule,
   MatListModule,
   MatGridListModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatInputModule,
+  MatIconModule
 ]
 
 
