@@ -1,4 +1,58 @@
-<p>home works!</p>
+<mat-card>
+  <mat-card-actions align="start">
+    <button mat-button mat-raised-button color="primary" (click)="onGetData()">Get data</button>
+    <button mat-button mat-raised-button color="accent" (click)="onShowData()">Show data</button>
+  </mat-card-actions>
+</mat-card>
+
+<div >
+  <div *ngIf="!showResult" class="words_container">
+    <div *ngFor="let word of words">
+      <mat-card-content>
+        <mat-card *ngFor="let element of word">
+          <mat-card-content>
+            <h1>Word: {{element.word}}</h1>
+            <div>
+              <span>Score: {{element.score}}</span>
+            </div>
+            <div>Tags:
+              <div *ngFor="let tag of element.tags">
+                <span> {{tag}}</span>
+              </div>
+            </div>
+          </mat-card-content>
+
+        </mat-card>
+      </mat-card-content>
+    </div>
+  </div>
+
+  <div *ngIf="showResult" class="words_container">
+    <div *ngFor="let word of wordsResult" >
+      <mat-card-content>
+        <mat-card *ngFor="let element of word">
+          <mat-card-content>
+            <h1>Word: {{element.word}}</h1>
+            <div>
+              <span>Score: {{element.score}}</span>
+            </div>
+            <div >Tags:
+              <div *ngFor="let tag of element.tags">
+                <span>{{tag}}:</span>
+                <span> {{tag.split().join().length}}</span>
+              </div>
+            </div>
+          </mat-card-content>
+
+        </mat-card>
+      </mat-card-content>
+    </div>
+
+  </div>
+</div>
+
+
+
 
 
 
